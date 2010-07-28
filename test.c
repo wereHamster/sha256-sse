@@ -1,11 +1,5 @@
-//
-//  main.c
-//  sha
-//
-//  Created by Tomas Carnecky on 7/26/10.
-//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
-//
 
+#include "sha256.h"
 
 #include <stdio.h>
 #include <stdint.h>
@@ -13,9 +7,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
-
-
-#include "sha256.h"
 
 #define NBLOCKS 4
 
@@ -137,14 +128,14 @@ static void test()
             printf("FAILED at %d\n", i);
             dump_H(hash[0][i]); printf("\n");
             dump_H(hash[1][i]); printf("\n");
-            return 1;
         }
     }
 }
 
 int main(int argc, const char * argv[])
 {
-    one(1024);
+	test();
+	one(1024);
     
     return 0;
 }
